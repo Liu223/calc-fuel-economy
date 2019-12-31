@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>燃費計算</title>
+</head>
+<body>
+<h1>★燃費計算★</h1>
+<!--入力-->
+<form action="/" method="post">
+    <p>■給油量を入力してください</p>
+    <p><input type="text" name="kyuyuRyo" th:value="${valueKyuyuRyo}">L</p>
+    <p>■トリップメーター値を入力してください</p>
+    <p><input type="text" name="tripMeterChi" th:value="${valueTripMeterChi}">km</p>
+    <p>■計算ボタンをクリックしてください</p>
+    <p><input type="submit" value="計算"></p>
+    <p>■計算結果</p>
+</form>
+<!--出力-->
+<p th:text="${msgResult}">please wait...</p>
+</body>
+</html>
